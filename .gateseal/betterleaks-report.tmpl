@@ -1,0 +1,4 @@
+{{- /* gateseal owns this file; gateseal configure writes it. */ -}}
+{{ range . }}{{ .File }}:{{ .StartLine }}:{{ .StartColumn }}: {{ .RuleID }} ({{ .Description }})
+{{ end }}{{ if . }}Next: Remove each secret, stage the fix, and retry. Rotate any secret that was real.
+{{ end -}}

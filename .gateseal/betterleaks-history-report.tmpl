@@ -1,0 +1,4 @@
+{{- /* gateseal owns this file; gateseal configure writes it. */ -}}
+{{ range . }}{{ .File }}:{{ .StartLine }}:{{ .StartColumn }}: {{ .RuleID }} ({{ .Description }}) in commit {{ .Commit }}
+{{ end }}{{ if . }}Next: Rotate each secret that was real, because the pushed history holds it. Remove it from the commits that add it before merging.
+{{ end -}}
