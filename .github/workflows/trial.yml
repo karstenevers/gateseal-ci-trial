@@ -106,3 +106,37 @@ jobs:
       - name: Run pre-commit on every file
         shell: bash
         run: pre-commit run --all-files --hook-stage manual --show-diff-on-failure
+  heavy:
+    strategy:
+      matrix:
+        mode: [heavy-download, heavy-cache]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Restore the binaries
+        id: restore
+        if: matrix.mode == 'heavy-cache'
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          key: heavy-v1-${{ runner.os }}
+          path: ${{ runner.temp }}/heavy
+      - name: Download Terraform and Trivy
+        if: steps.restore.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/heavy"
+          cd "$RUNNER_TEMP/heavy"
+          curl --fail --location --silent --show-error -o terraform.zip https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_linux_amd64.zip
+          curl --fail --location --silent --show-error -o trivy.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.58.1/trivy_0.58.1_Linux-64bit.tar.gz
+          ls -l
+      - name: Unpack them
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/heavy"
+          mkdir -p bin
+          unzip -o -q terraform.zip -d bin
+          tar -xzf trivy.tar.gz -C bin trivy
+          bin/terraform version
+          bin/trivy --version
