@@ -76,3 +76,33 @@ jobs:
           echo "TRIAL gate_seconds=$(echo "$(date +%s.%N) - $start" | bc)"
           rm -rf "$HOME/.cache/uv" "$HOME/.cache/pip" "$HOME/.cache/virtualenv" "$job/gate.json"
           du -sh "$HOME" | sed 's/^/TRIAL du /'
+  native:
+    strategy:
+      matrix:
+        mode: [native-cold, native-cache]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Restore the pre-commit cache
+        if: matrix.mode == 'native-cache'
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          key: pre-commit-v1-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
+          path: ~/.cache/pre-commit
+      - name: Install pre-commit and mise
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --user --quiet pre-commit==4.7.0
+          mkdir -p "$RUNNER_TEMP/bin"
+          curl --fail --location --silent --show-error "$GATESEAL_MISE_URL" --output "$RUNNER_TEMP/bin/mise"
+          echo "$GATESEAL_MISE_SHA256  $RUNNER_TEMP/bin/mise" | sha256sum --check -
+          chmod 0755 "$RUNNER_TEMP/bin/mise"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Run pre-commit on every file
+        shell: bash
+        run: pre-commit run --all-files --hook-stage manual --show-diff-on-failure
