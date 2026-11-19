@@ -7,8 +7,7 @@ release = "2026.11-team-tools"
 
 [ci]
 provider = "github"
-default_branch = "main"
-branches = ["release/*"]
+standalone = false
 runs_on = ["ubuntu-latest"]
 
 [choices]

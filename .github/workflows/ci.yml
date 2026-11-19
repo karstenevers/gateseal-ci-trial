@@ -1,0 +1,14 @@
+name: ci
+on:
+  push:
+    branches: ["test/107-live-standalone"]
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "a second job of the team"
+  gateseal:
+    needs: lint
+    uses: ./.github/workflows/gateseal.yml
+    secrets: inherit
