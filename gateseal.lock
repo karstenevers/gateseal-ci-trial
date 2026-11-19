@@ -2,9 +2,6 @@
   "choices": {
     "hygiene": {
       "exclude": []
-    },
-    "python": {
-      "target_version": "py311"
     }
   },
   "components": {
@@ -17,43 +14,34 @@
       "repository": "https://github.com/pre-commit/pre-commit-hooks",
       "revision": "3e8a8703264a2f4a69428a0aa4dcb512790b2c8c",
       "version": "6.0.0"
-    },
-    "ruff": {
-      "hook_ids": [
-        "ruff-check",
-        "ruff-format"
-      ],
-      "repository": "https://github.com/astral-sh/ruff-pre-commit",
-      "revision": "38bfb07c0c64c304f47eb52090f8288150c77730",
-      "version": "0.17.1"
     }
   },
   "exceptions": {},
   "gateseal": {
-    "commit": "1e17fca34571e8e1c8e7e287a4053a45f1ca2e4b",
+    "commit": "9d943ab91d118139c83c0208fc8879b1cb340b00",
     "repository": "https://github.com/karstenevers/gateseal",
     "version": "0.2.0"
   },
-  "inputs_fingerprint": "e93a8b05f9ce24b429bc970c3d0d82a7f5c198f210435ab5e2061289e422e04f",
-  "manifest_sha256": "b0eb6e46d5846d8451fd92a8e6f69010c35a80430d821e07418c552f67dc3682",
+  "inputs_fingerprint": "e6f95f65b678524e8c0d789a815ffbe6e9919909a3832ca301141235ea2139b5",
+  "manifest_sha256": "e3b3ccaeceea7e4d988988c72a79b856395b78fea7a694da88ba100872938af8",
   "native_artifacts": {
     "betterleaks": {
       "minimum_mise": "2026.10.19",
       "platforms": {
         "linux-x64": {
           "executable": "betterleaks",
-          "executable_sha256": "0ace40b41652344608f89967fe93c6caf4faae9a4df20423632c7efb02a4d4e1",
-          "sha256": "f8b185a39ffcece2a1ca82bf3a4e7435cd81963ffd16b7a9128daf75f35f6de7",
-          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_linux_x64.tar.gz"
+          "executable_sha256": "506082605cad984abd6ecf979a5f00fd6d701bc3ab2104a6029b1d068b3e320c",
+          "sha256": "c174b42d7aa60caf58c0c3e555c0e4bed01fe6b0d99a412bce777b5af4ce913e",
+          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_linux_x64.tar.gz"
         },
         "macos-arm64": {
           "executable": "betterleaks",
-          "executable_sha256": "70d2103c2915aababa0e1eea121bd3db0ff0da86bee40ddc6f5982181acaf6d0",
-          "sha256": "83dd7eaab13d44a1e8e347a17064cdef153a1478db473276d41b38d55613d3f2",
-          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_darwin_arm64.tar.gz"
+          "executable_sha256": "13ac5109fa85a590c7ba6e7f130311e0c60a2bf582c3aac073176c93b46621a8",
+          "sha256": "ca91eb3b006f15478411f235b5e2712fb15cea74f6701ebadc2364efe0af1403",
+          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_darwin_arm64.tar.gz"
         }
       },
-      "version": "1.9.0"
+      "version": "1.10.1"
     }
   },
   "outputs": {
@@ -72,24 +60,19 @@
       "executable": false,
       "sha256": "af60be81d22bdd646aa8b41ba8955d86420d71b486a14f81fa1d971293e4c71d"
     },
-    ".gateseal/ruff.toml": {
-      "encoding": "utf-8",
-      "executable": false,
-      "sha256": "ffcf7d3c282f374519e8110da535fbde8e4d9dd0d81b7dad32db64a6979f8c2c"
-    },
     ".github/workflows/gateseal.yml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "9136fa927ca8578f81e44610933c9220f9f2f2857762f64e2eb343d6c3a9cfdf"
+      "sha256": "bda8c1c256fc4087577b8f5a4a41051c830caf059dd5645fdb92b40ad1c8377e"
     },
     ".pre-commit-config.yaml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "07e2c69adaf0ed485a0af53abf7457abf46f9f111cb6cad90a4fa9164d4540ab"
+      "sha256": "8e61581f70404b40c0d860eaf3f88c510c9167d784e7bec599bc86e8cd699127"
     }
   },
   "policy": {
-    "digest": "sha256:8f83836a9c0cab7852b386071e5a15d194420a64eb868605299046491885b465",
+    "digest": "sha256:6f7081d899472b6482d243bdd2fda19928f753da1e462125427b7a8b33b658d9",
     "kind": "bundled",
     "release": "2026.11-team-tools"
   },

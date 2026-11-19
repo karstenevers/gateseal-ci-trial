@@ -1,5 +1,5 @@
 schema = 1
-capabilities = ["hygiene", "python", "secrets"]
+capabilities = ["hygiene", "secrets"]
 
 [policy]
 source = "bundled"
@@ -8,6 +8,8 @@ release = "2026.11-team-tools"
 [ci]
 provider = "github"
 default_branch = "main"
+branches = ["release/*"]
+runs_on = ["ubuntu-24.04", "ubuntu-latest"]
 
 [choices]
 

@@ -8,7 +8,7 @@
         }
       ],
       "repo": "https://github.com/karstenevers/gateseal",
-      "rev": "1e17fca34571e8e1c8e7e287a4053a45f1ca2e4b"
+      "rev": "9d943ab91d118139c83c0208fc8879b1cb340b00"
     },
     {
       "hooks": [
@@ -43,52 +43,7 @@
     {
       "hooks": [
         {
-          "args": [
-            "--config",
-            ".gateseal/ruff.toml",
-            "--fix",
-            "--output-format",
-            "concise",
-            "--"
-          ],
-          "id": "ruff-check",
-          "name": "ruff check",
-          "stages": [
-            "pre-commit",
-            "manual"
-          ],
-          "types_or": [
-            "python",
-            "pyi",
-            "jupyter"
-          ]
-        },
-        {
-          "args": [
-            "--config",
-            ".gateseal/ruff.toml",
-            "--"
-          ],
-          "id": "ruff-format",
-          "name": "ruff format",
-          "stages": [
-            "pre-commit",
-            "manual"
-          ],
-          "types_or": [
-            "python",
-            "pyi",
-            "jupyter"
-          ]
-        }
-      ],
-      "repo": "https://github.com/astral-sh/ruff-pre-commit",
-      "rev": "38bfb07c0c64c304f47eb52090f8288150c77730"
-    },
-    {
-      "hooks": [
-        {
-          "entry": "mise --no-config exec --deny-env 'http:betterleaks-ec1f17502e09[platforms_linux_x64_url=https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_linux_x64.tar.gz,platforms_linux_x64_checksum=sha256:f8b185a39ffcece2a1ca82bf3a4e7435cd81963ffd16b7a9128daf75f35f6de7,platforms_macos_arm64_url=https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_darwin_arm64.tar.gz,platforms_macos_arm64_checksum=sha256:83dd7eaab13d44a1e8e347a17064cdef153a1478db473276d41b38d55613d3f2]@1.9.0' -- betterleaks dir --config .gateseal/betterleaks.toml --gitleaks-ignore-path /dev/null --ignore-gitleaks-allow --redact --no-banner --no-color --report-format template --report-template .gateseal/betterleaks-report.tmpl --report-path - --",
+          "entry": "mise --no-config exec --deny-env 'http:betterleaks-7168be297a93[platforms_linux_x64_url=https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_linux_x64.tar.gz,platforms_linux_x64_checksum=sha256:c174b42d7aa60caf58c0c3e555c0e4bed01fe6b0d99a412bce777b5af4ce913e,platforms_macos_arm64_url=https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_darwin_arm64.tar.gz,platforms_macos_arm64_checksum=sha256:ca91eb3b006f15478411f235b5e2712fb15cea74f6701ebadc2364efe0af1403]@1.10.1' -- betterleaks dir --config .gateseal/betterleaks.toml --gitleaks-ignore-path /dev/null --ignore-gitleaks-allow --redact --no-banner --no-color --report-format template --report-template .gateseal/betterleaks-report.tmpl --report-path - --",
           "id": "betterleaks",
           "language": "unsupported",
           "name": "Detect secrets with Betterleaks",
