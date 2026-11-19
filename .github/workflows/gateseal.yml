@@ -14,7 +14,7 @@ concurrency:
 jobs:
   gateseal:
     name: ${{ github.event_name == 'push' && 'gateseal-push' || 'gateseal' }}
-    runs-on: ["ubuntu-24.04", "ubuntu-latest"]
+    runs-on: ["ubuntu-latest"]
     timeout-minutes: 30
     steps:
       - name: Check out the repository with its full history

@@ -22,8 +22,8 @@
     "repository": "https://github.com/karstenevers/gateseal",
     "version": "0.2.0"
   },
-  "inputs_fingerprint": "e6f95f65b678524e8c0d789a815ffbe6e9919909a3832ca301141235ea2139b5",
-  "manifest_sha256": "e3b3ccaeceea7e4d988988c72a79b856395b78fea7a694da88ba100872938af8",
+  "inputs_fingerprint": "779fd9f3382e271603102c8d7cc06e5712f0c7cab8611785a5804b28dded598d",
+  "manifest_sha256": "759f8cf3be86f388c3764e075293bacf834cf1c9efa1fa9ad2765b496d9d1ee6",
   "native_artifacts": {
     "betterleaks": {
       "minimum_mise": "2026.10.19",
@@ -63,7 +63,7 @@
     ".github/workflows/gateseal.yml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "bda8c1c256fc4087577b8f5a4a41051c830caf059dd5645fdb92b40ad1c8377e"
+      "sha256": "c4e8bb8b9a90be4a01203e74f37f38aa0df8e7bf146181562bdd3945617e87f9"
     },
     ".pre-commit-config.yaml": {
       "encoding": "utf-8",

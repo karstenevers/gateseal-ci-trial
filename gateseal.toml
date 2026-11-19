@@ -9,7 +9,7 @@ release = "2026.11-team-tools"
 provider = "github"
 default_branch = "main"
 branches = ["release/*"]
-runs_on = ["ubuntu-24.04", "ubuntu-latest"]
+runs_on = ["ubuntu-latest"]
 
 [choices]
 
