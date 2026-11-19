@@ -19,7 +19,7 @@ jobs:
   gateseal:
     strategy:
       matrix:
-        mode: [cold, lean]
+        mode: [cold, store]
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -28,11 +28,11 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Restore the gateseal cache
-        if: matrix.mode == 'lean'
+        if: matrix.mode == 'store'
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
         with:
-          key: gateseal-trial-v1-${{ runner.os }}-${{ hashFiles('gateseal.lock') }}
-          path: ${{ runner.temp }}/gateseal/home
+          key: gateseal-store-v1-${{ runner.os }}-${{ hashFiles('gateseal.lock') }}
+          path: ${{ runner.temp }}/gateseal/home/.cache/pre-commit
       - name: Set up the locked gateseal, pre-commit and the policy
         shell: bash
         run: |
