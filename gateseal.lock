@@ -24,36 +24,60 @@
         "ruff-format"
       ],
       "repository": "https://github.com/astral-sh/ruff-pre-commit",
-      "revision": "38bfb07c0c64c304f47eb52090f8288150c77730",
-      "version": "0.17.1"
+      "revision": "ef6cf06c079dd6b299dfc720b0f14400c9d168e1",
+      "version": "0.17.5"
+    },
+    "tsc": {
+      "hook_ids": [
+        "tsc"
+      ],
+      "package": "typescript",
+      "packages": {},
+      "version": "6.0.3"
     }
   },
   "exceptions": {},
   "gateseal": {
-    "commit": "1e17fca34571e8e1c8e7e287a4053a45f1ca2e4b",
+    "commit": "5a712543c4ef43d2c07c918f10a06441a69c0a9a",
     "repository": "https://github.com/karstenevers/gateseal",
     "version": "0.2.0"
   },
-  "inputs_fingerprint": "e93a8b05f9ce24b429bc970c3d0d82a7f5c198f210435ab5e2061289e422e04f",
-  "manifest_sha256": "b0eb6e46d5846d8451fd92a8e6f69010c35a80430d821e07418c552f67dc3682",
+  "inputs_fingerprint": "fc9c4d351df4a9de732383f6f1549c9d94c9abc1f0caea4bc203c5ab4c1a88e1",
+  "manifest_sha256": "042fc451402b593f825d65118aab6b43f74c970e8cf1e075457befca98e5ad60",
   "native_artifacts": {
     "betterleaks": {
       "minimum_mise": "2026.10.19",
       "platforms": {
         "linux-x64": {
           "executable": "betterleaks",
-          "executable_sha256": "0ace40b41652344608f89967fe93c6caf4faae9a4df20423632c7efb02a4d4e1",
-          "sha256": "f8b185a39ffcece2a1ca82bf3a4e7435cd81963ffd16b7a9128daf75f35f6de7",
-          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_linux_x64.tar.gz"
+          "executable_sha256": "506082605cad984abd6ecf979a5f00fd6d701bc3ab2104a6029b1d068b3e320c",
+          "sha256": "c174b42d7aa60caf58c0c3e555c0e4bed01fe6b0d99a412bce777b5af4ce913e",
+          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_linux_x64.tar.gz"
         },
         "macos-arm64": {
           "executable": "betterleaks",
-          "executable_sha256": "70d2103c2915aababa0e1eea121bd3db0ff0da86bee40ddc6f5982181acaf6d0",
-          "sha256": "83dd7eaab13d44a1e8e347a17064cdef153a1478db473276d41b38d55613d3f2",
-          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_darwin_arm64.tar.gz"
+          "executable_sha256": "13ac5109fa85a590c7ba6e7f130311e0c60a2bf582c3aac073176c93b46621a8",
+          "sha256": "ca91eb3b006f15478411f235b5e2712fb15cea74f6701ebadc2364efe0af1403",
+          "url": "https://github.com/betterleaks/betterleaks/releases/download/v1.10.1/betterleaks_1.10.1_darwin_arm64.tar.gz"
         }
       },
-      "version": "1.9.0"
+      "version": "1.10.1"
+    },
+    "node": {
+      "minimum_mise": "2026.10.19",
+      "platforms": {
+        "linux-x64": {
+          "executable": "bin/node",
+          "sha256": "061ec3e3062115705b56b51fa9cc330ab50d34b6969387d4e4b1a50c6809acc2",
+          "url": "https://nodejs.org/dist/v24.22.3/node-v24.22.3-linux-x64.tar.gz"
+        },
+        "macos-arm64": {
+          "executable": "bin/node",
+          "sha256": "ff6e17d4874b76d272212b908cc020d6e815fba5a6c7eaaa06add725840307fd",
+          "url": "https://nodejs.org/dist/v24.22.3/node-v24.22.3-darwin-arm64.tar.gz"
+        }
+      },
+      "version": "24.22.3"
     }
   },
   "outputs": {
@@ -80,16 +104,16 @@
     ".github/workflows/gateseal.yml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "9136fa927ca8578f81e44610933c9220f9f2f2857762f64e2eb343d6c3a9cfdf"
+      "sha256": "a6f7687c1e346162734cb6292d07ed6b1a9968a4b307ab50d448906fd218dcf9"
     },
     ".pre-commit-config.yaml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "07e2c69adaf0ed485a0af53abf7457abf46f9f111cb6cad90a4fa9164d4540ab"
+      "sha256": "d7b6fd903cda759c3dba05ffd32808ca0aa30e43f01c2718a537afec7177cf77"
     }
   },
   "policy": {
-    "digest": "sha256:8f83836a9c0cab7852b386071e5a15d194420a64eb868605299046491885b465",
+    "digest": "sha256:debc6dc2db183762551183f159400f91f95051ae17e14b873678d53831e9d200",
     "kind": "bundled",
     "release": "2026.11-team-tools"
   },
