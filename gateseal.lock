@@ -38,11 +38,11 @@
   },
   "exceptions": {},
   "gateseal": {
-    "commit": "5a712543c4ef43d2c07c918f10a06441a69c0a9a",
+    "commit": "4cb05dcaaeff86ebacf3c7e04cf40c306328b0e3",
     "repository": "https://github.com/karstenevers/gateseal",
     "version": "0.2.0"
   },
-  "inputs_fingerprint": "fc9c4d351df4a9de732383f6f1549c9d94c9abc1f0caea4bc203c5ab4c1a88e1",
+  "inputs_fingerprint": "49a8a5c13399adeabe5ca71b36b573a17bd7a973cca2d670f39fa4e7e746f251",
   "manifest_sha256": "042fc451402b593f825d65118aab6b43f74c970e8cf1e075457befca98e5ad60",
   "native_artifacts": {
     "betterleaks": {
@@ -104,16 +104,16 @@
     ".github/workflows/gateseal.yml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "a6f7687c1e346162734cb6292d07ed6b1a9968a4b307ab50d448906fd218dcf9"
+      "sha256": "10a24874750f6ff98e9b9f57eeeb1cb1f7c8b2dc1f1d961d2e6739f0dd3e7293"
     },
     ".pre-commit-config.yaml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "d7b6fd903cda759c3dba05ffd32808ca0aa30e43f01c2718a537afec7177cf77"
+      "sha256": "46d7ac7d8e6667f50ed2bd6d7f4a0caf47d2abb9a7759424ffeecf5b666987da"
     }
   },
   "policy": {
-    "digest": "sha256:debc6dc2db183762551183f159400f91f95051ae17e14b873678d53831e9d200",
+    "digest": "sha256:e6fd3be40dfe3355464f2447ddb2aff4d158c2064b5f10ef9463833a07973084",
     "kind": "bundled",
     "release": "2026.11-team-tools"
   },
