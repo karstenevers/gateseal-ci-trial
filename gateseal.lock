@@ -53,11 +53,11 @@
   },
   "exceptions": {},
   "gateseal": {
-    "commit": "61087a27717a3a4fb5dcc023898ee4ed67fc2544",
+    "commit": "e6b7ce90ba8f7a4271cdd2c607e05313bbd72a27",
     "repository": "https://github.com/karstenevers/gateseal",
     "version": "0.2.0"
   },
-  "inputs_fingerprint": "42cd8c4bcc38298a99e76c69b445f5d501cde2ab5bb95aadf5cccf01e04039df",
+  "inputs_fingerprint": "10fab75ba4dc189e1657eb53bf0648fb8d034c65f28eaadc9820559724ccc246",
   "manifest_sha256": "019b5797f4342cc42f962512601f6a0aa8e7c0bf8ce43b2b79f953c7d2caf0b5",
   "native_artifacts": {
     "betterleaks": {
@@ -116,6 +116,11 @@
       "executable": false,
       "sha256": "3e956e1c95547b5c15fc6ceec14d0624ceace0d88b238906f1b283ad4b1ef217"
     },
+    ".gateseal/eslint-suppressions.json": {
+      "encoding": "utf-8",
+      "executable": false,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
     ".gateseal/eslint.json": {
       "encoding": "utf-8",
       "executable": false,
@@ -134,16 +139,16 @@
     ".github/workflows/gateseal.yml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "4d1ab285aec79a358f7d7f48d2550c6544a4bb869e16c6754803d2f2db1367c7"
+      "sha256": "95abb0a32f87eb3f157b81b11fdf47dcefa06b3d4ab6209d3532d2d12be578ce"
     },
     ".pre-commit-config.yaml": {
       "encoding": "utf-8",
       "executable": false,
-      "sha256": "976e3fc8ce7b791f15eb634036bb786bf5d8937dca55f91f1af6b7bf72714b7f"
+      "sha256": "571b8645f6b89ad259afcd11a45addbbad547beaf65b44c9809e6a6553f413ac"
     }
   },
   "policy": {
-    "digest": "sha256:182b5e5c7e40b1389f4d9a92c40d9aeb18a581275e79709d4e31a4c68db4abec",
+    "digest": "sha256:4d3f7930f78959668b34095f64909b039ed68d20d8f76b02cb736df14c0cc154",
     "kind": "bundled",
     "release": "2026.11-team-tools"
   },
